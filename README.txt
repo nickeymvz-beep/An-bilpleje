@@ -15,3 +15,6 @@ If you want, I can now:
 - Replace the placeholder images with licensed car-detail photos (I can find free-to-use images and add them to the mockup).
 - Convert the mockup into a WordPress theme or a working Shopify template.
 - Build the booking + subscription flows using WooCommerce with example config files.
+
+
+its fine
