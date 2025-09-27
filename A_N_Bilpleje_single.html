@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="da">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>A&amp;N Bilpleje & Klargøring</title>
+  <link rel="stylesheet" href="styles.css">
+<style>
+
+:root{
+  --bg:#f7f7f8; --primary:#1f2937; --accent:#0b74de; --muted:#6b7280;
+  --card:#ffffff; --radius:10px;
+  --maxw:1100px;
+  --shadow: 0 6px 18px rgba(22,24,28,0.08);
+}
+*{box-sizing:border-box}
+body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; margin:0; background:var(--bg); color:var(--primary); -webkit-font-smoothing:antialiased}
+.container{max-width:var(--maxw); margin:0 auto; padding:18px;}
+.site-header{background:#fff; border-bottom:1px solid #eee; position:sticky; top:0; z-index:30}
+.header-inner{display:flex; align-items:center; justify-content:space-between; gap:12px;}
+.logo img{display:block;}
+.nav{display:flex; gap:14px; align-items:center;}
+.nav a{color:var(--primary); text-decoration:none; font-weight:600;}
+.btn-primary{background:var(--accent); color:white; padding:10px 16px; border-radius:8px; text-decoration:none; font-weight:700;}
+.btn-outline{border:1px solid #ddd; padding:8px 12px; border-radius:8px; text-decoration:none; color:var(--primary);}
+.mobile-toggle{display:none; background:none; border:0; font-size:22px;}
+
+.hero{padding:48px 0; background:linear-gradient(180deg, #fff 0%, #fafafa 100%);}
+.hero-grid{display:grid; grid-template-columns:1fr 460px; align-items:center; gap:28px;}
+.hero h1{font-size:34px; margin:0 0 8px;}
+.lead{color:var(--muted); margin:0 0 16px;}
+.cta{display:flex; gap:10px; margin:12px 0;}
+.trust{display:flex; gap:12px; padding:0; list-style:none; color:var(--muted); margin-top:10px;}
+
+.image-placeholder{height:280px; background:linear-gradient(135deg,#e6eefc,#f3f7fb); border-radius:12px; display:flex; align-items:center; justify-content:center; color:#666; box-shadow:var(--shadow)}
+
+.section{padding:36px 0;}
+.cards{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:18px; margin-top:18px;}
+.card{background:var(--card); padding:18px; border-radius:12px; box-shadow:var(--shadow);}
+.small-btn{display:inline-block; margin-top:12px; background:var(--accent); color:#fff; padding:8px 12px; border-radius:8px; text-decoration:none; font-weight:700;}
+
+.gallery-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:12px; margin-top:12px;}
+.thumb{height:120px; background:#fff; border-radius:8px; display:flex; align-items:center; justify-content:center; box-shadow:var(--shadow); color:#777;}
+
+.shop-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:12px; margin-top:12px;}
+.product{background:#fff; padding:12px; border-radius:10px; box-shadow:var(--shadow); display:flex; flex-direction:column; gap:8px; align-items:flex-start;}
+.product-img{height:96px; width:100%; background:#f1f5f9; border-radius:8px; display:flex; align-items:center; justify-content:center; color:#888;}
+
+.subs-grid{display:flex; gap:14px; margin-top:12px; flex-wrap:wrap;}
+.sub-card{background:#fff; padding:14px; border-radius:10px; box-shadow:var(--shadow); min-width:170px; text-align:center;}
+.price{font-weight:800; font-size:18px; margin-top:8px;}
+
+.login-panel{margin-top:18px; background:#fff; padding:14px; border-radius:10px; box-shadow:var(--shadow); max-width:560px;}
+.login-panel input, .login-panel textarea{width:100%; padding:10px; margin-top:8px; border-radius:8px; border:1px solid #e5e7eb;}
+
+.contact-grid{display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:12px;}
+.contact-card{background:#fff; padding:16px; border-radius:10px; box-shadow:var(--shadow);}
+
+.site-footer{padding:18px 0; background:#fff; border-top:1px solid #eee; margin-top:24px;}
+.footer-grid{display:flex; justify-content:space-between; gap:8px; align-items:center; flex-wrap:wrap; color:var(--muted)}
+
+.modal{position:fixed; inset:0; display:none; align-items:center; justify-content:center; background:rgba(9,10,11,0.4); padding:20px;}
+.modal-inner{background:#fff; padding:18px; border-radius:12px; max-width:520px; width:100%;}
+.modal .close{background:none; border:0; font-size:20px; position:absolute; right:30px; top:20px; cursor:pointer;}
+
+@media(max-width:900px){ .hero-grid{grid-template-columns:1fr; } .nav{display:none} .mobile-toggle{display:block} .contact-grid{grid-template-columns:1fr} .subs-grid{flex-direction:column} }
+
+</style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">
+        <!-- Inline SVG logo -->
+        <img 
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="70" viewBox="0 0 240 70">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1">
+      <stop offset="0" stop-color="#0b74de"/>
+      <stop offset="1" stop-color="#0b6ecf"/>
+    </linearGradient>
+  </defs>
+  <rect width="240" height="70" rx="12" fill="#fff"/>
+  <g transform="translate(12,12)">
+    <circle cx="24" cy="22" r="20" fill="url(#g)"/>
+    <text x="12" y="28" font-family="Verdana, sans-serif" font-size="18" font-weight="700" fill="#fff">A&amp;N</text>
+    <text x="60" y="30" font-family="Arial, sans-serif" font-size="14" fill="#1f2937">Bilpleje &amp; Klargøring</text>
+  </g>
+</svg>
+ alt="A&N Bilpleje logo" height="54">
+      </div>
+      <nav class="nav">
+        <a href="#services">Services</a>
+        <a href="#gallery">Galleri</a>
+        <a href="#shop">Webshop</a>
+        <a href="#abonnement">Abonnement</a>
+        <a href="#kontakt">Kontakt</a>
+        <a class="btn-outline" href="#booking">Book nu</a>
+      </nav>
+      <button class="mobile-toggle" aria-label="menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <h1>A&amp;N Bilpleje & Klargøring</h1>
+          <p class="lead">Professionel bilpleje — klargøring, polering og abonnementsløsninger. Få din bil til at se ud som ny.</p>
+          <div class="cta">
+            <a href="#booking" class="btn-primary">Book tid</a>
+            <a href="#services" class="btn-ghost">Se services</a>
+          </div>
+          <ul class="trust">
+            <li>Mobil service</li>
+            <li>Miljøvenlige produkter</li>
+            <li>Fleksible abonnementer</li>
+          </ul>
+        </div>
+        <div class="hero-image">
+          <div class="image-placeholder">Billede: Skinnende bil / før-efter</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="section container">
+      <h2>Vores Services</h2>
+      <p class="muted">Pakker og a la carte - vi har noget til enhver bil og budget.</p>
+      <div class="cards">
+        <article class="card">
+          <h3>Udvendig vask</h3><p>Skumforvask, håndvask, fælge og tørrebehandling.</p><a class="small-btn" href="#booking">Book</a>
+        </article>
+        <article class="card">
+          <h3>Indvendig rengøring</h3><p>Støvsugning, rens af tekstiler og duftbehandling.</p><a class="small-btn" href="#booking">Book</a>
+        </article>
+        <article class="card">
+          <h3>Polering & Coating</h3><p>Lakpolering og keramisk coating for langvarig beskyttelse.</p><a class="small-btn" href="#booking">Book</a>
+        </article>
+        <article class="card">
+          <h3>Abonnement</h3><p>Fast månedlig klargøring — få antal gange til gode vist i din konto.</p><a class="small-btn" href="#abonnement">Se abonnement</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery" class="section container">
+      <h2>Galleri</h2>
+      <p class="muted">Før & efter - klik for at se detaljer.</p>
+      <div class="gallery-grid">
+        <div class="thumb">Før</div>
+        <div class="thumb">Efter</div>
+        <div class="thumb">Interiør</div>
+        <div class="thumb">Polering</div>
+      </div>
+    </section>
+
+    <!-- Shop -->
+    <section id="shop" class="section container">
+      <h2>Webshop</h2>
+      <p class="muted">Merch & plejeprodukter</p>
+      <div class="shop-grid">
+        <div class="product">
+          <div class="product-img">Paraply med logo</div>
+          <h4>Paraply - A&amp;N</h4>
+          <p>Pris: 129 DKK</p>
+          <a class="small-btn" href="#checkout">Køb</a>
+        </div>
+        <div class="product">
+          <div class="product-img">Duftfrisker</div>
+          <h4>Duftfrisker</h4>
+          <p>Pris: 39 DKK</p>
+          <a class="small-btn" href="#checkout">Køb</a>
+        </div>
+        <div class="product">
+          <div class="product-img">Krus</div>
+          <h4>Krus - A&amp;N</h4>
+          <p>Pris: 89 DKK</p>
+          <a class="small-btn" href="#checkout">Køb</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Abonnement -->
+    <section id="abonnement" class="section container">
+      <h2>Abonnement</h2>
+      <p class="muted">Vælg en fast pakke og få fordele — log ind for at se dine tilgodehavender.</p>
+      <div class="subs-grid">
+        <div class="sub-card">
+          <h3>Bronze</h3><p>1 klargøring pr. måned</p><p class="price">199 DKK/md</p><a class="small-btn" href="#signup">Tilmeld</a>
+        </div>
+        <div class="sub-card">
+          <h3>Sølv</h3><p>2 klargøringer pr. måned</p><p class="price">349 DKK/md</p><a class="small-btn" href="#signup">Tilmeld</a>
+        </div>
+        <div class="sub-card">
+          <h3>Guld</h3><p>4 klargøringer pr. måned</p><p class="price">649 DKK/md</p><a class="small-btn" href="#signup">Tilmeld</a>
+        </div>
+      </div>
+      <div class="login-panel">
+        <h4>Login for abonnenter</h4>
+        <form id="login-form">
+          <input placeholder="E-mail" required type="email">
+          <input placeholder="Adgangskode" required type="password">
+          <button class="small-btn" type="submit">Log ind</button>
+        </form>
+        <div class="subscription-status" aria-live="polite" id="sub-status">Ikke logget ind.</div>
+      </div>
+    </section>
+
+    <!-- Kontakt -->
+    <section id="kontakt" class="section container">
+      <h2>Kontakt</h2>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <h3>Adresse</h3>
+          <p>Din adresse eller arbejdsområde</p>
+          <h3>Telefon</h3>
+          <p><a href="tel:+4500000000">+45 00 00 00 00</a></p>
+        </div>
+        <div class="contact-card">
+          <h3>Åbningstider</h3>
+          <p>Man-Fre 08:00 - 18:00</p>
+          <p>Weekend efter aftale</p>
+          <h3>Kontaktformular</h3>
+          <form id="contact-form">
+            <input placeholder="Navn" required>
+            <input placeholder="E-mail" required type="email">
+            <textarea placeholder="Besked" required></textarea>
+            <button class="small-btn" type="submit">Send</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>© A&amp;N Bilpleje & Klargøring</div>
+        <div>Følg os: (ikon links)</div>
+        <div>Adresse / CVR</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Booking modal (placeholder JS) -->
+  <div id="booking" class="modal" aria-hidden="true">
+    <div class="modal-inner">
+      <button class="close">✕</button>
+      <h3>Book tid</h3>
+      <form id="booking-form">
+        <label>Service<select><option>Udvendig vask</option><option>Indvendig</option><option>Polering</option></select></label>
+        <label>Dato <input type="date" required></label>
+        <label>Tid <input type="time"></label>
+        <label>Navn <input required></label>
+        <label>Telefon <input required></label>
+        <button class="small-btn" type="submit">Bekræft booking</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+<script>
+
+// Basic interactivity for the mockup (no backend)
+document.querySelectorAll('.mobile-toggle').forEach(btn=>btn.addEventListener('click', ()=>{
+  const nav = document.querySelector('.nav');
+  nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+}));
+
+// Booking modal open/close
+const bookingModal = document.getElementById('booking');
+document.querySelectorAll('a[href="#booking"], button.open-booking').forEach(a=>a.addEventListener('click', (e)=>{
+  e.preventDefault();
+  bookingModal.style.display = 'flex';
+  bookingModal.setAttribute('aria-hidden','false');
+}));
+document.querySelectorAll('#booking .close').forEach(b=>b.addEventListener('click', ()=>{
+  bookingModal.style.display = 'none';
+  bookingModal.setAttribute('aria-hidden','true');
+}));
+document.getElementById('booking-form').addEventListener('submit', function(e){
+  e.preventDefault();
+  alert('Tak! Din booking er modtaget (mockup). Vi vil kontakte dig for bekræftelse.');
+  bookingModal.style.display='none';
+})
+
+// Mock login (for showing subscription balance)
+document.getElementById('login-form')?.addEventListener('submit', function(e){
+  e.preventDefault();
+  // For demo we just show mocked status
+  const status = document.getElementById('sub-status');
+  status.textContent = 'Velkommen! Du har 2 klargøringer til gode denne måned.';
+});
+
+// Contact form stub
+document.getElementById('contact-form')?.addEventListener('submit', function(e){
+  e.preventDefault();
+  alert('Tak for din besked! Vi kontakter dig snarest.');
+});
+
+</script>
+</body>
+</html>
