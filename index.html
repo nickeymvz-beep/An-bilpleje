@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="da">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>A&amp;N Bilpleje & Klargøring</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">
+        <!-- Inline SVG logo -->
+        <img src="logo.svg" alt="A&N Bilpleje logo" height="54">
+      </div>
+      <nav class="nav">
+        <a href="#services">Services</a>
+        <a href="#gallery">Galleri</a>
+        <a href="#shop">Webshop</a>
+        <a href="#abonnement">Abonnement</a>
+        <a href="#kontakt">Kontakt</a>
+        <a class="btn-outline" href="#booking">Book nu</a>
+      </nav>
+      <button class="mobile-toggle" aria-label="menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <h1>A&amp;N Bilpleje & Klargøring</h1>
+          <p class="lead">Professionel bilpleje — klargøring, polering og abonnementsløsninger. Få din bil til at se ud som ny.</p>
+          <div class="cta">
+            <a href="#booking" class="btn-primary">Book tid</a>
+            <a href="#services" class="btn-ghost">Se services</a>
+          </div>
+          <ul class="trust">
+            <li>Mobil service</li>
+            <li>Miljøvenlige produkter</li>
+            <li>Fleksible abonnementer</li>
+          </ul>
+        </div>
+        <div class="hero-image">
+          <div class="image-placeholder">Billede: Skinnende bil / før-efter</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="section container">
+      <h2>Vores Services</h2>
+      <p class="muted">Pakker og a la carte - vi har noget til enhver bil og budget.</p>
+      <div class="cards">
+        <article class="card">
+          <h3>Udvendig vask</h3><p>Skumforvask, håndvask, fælge og tørrebehandling.</p><a class="small-btn" href="#booking">Book</a>
+        </article>
+        <article class="card">
+          <h3>Indvendig rengøring</h3><p>Støvsugning, rens af tekstiler og duftbehandling.</p><a class="small-btn" href="#booking">Book</a>
+        </article>
+        <article class="card">
+          <h3>Polering & Coating</h3><p>Lakpolering og keramisk coating for langvarig beskyttelse.</p><a class="small-btn" href="#booking">Book</a>
+        </article>
+        <article class="card">
+          <h3>Abonnement</h3><p>Fast månedlig klargøring — få antal gange til gode vist i din konto.</p><a class="small-btn" href="#abonnement">Se abonnement</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery" class="section container">
+      <h2>Galleri</h2>
+      <p class="muted">Før & efter - klik for at se detaljer.</p>
+      <div class="gallery-grid">
+        <div class="thumb">Før</div>
+        <div class="thumb">Efter</div>
+        <div class="thumb">Interiør</div>
+        <div class="thumb">Polering</div>
+      </div>
+    </section>
+
+    <!-- Shop -->
+    <section id="shop" class="section container">
+      <h2>Webshop</h2>
+      <p class="muted">Merch & plejeprodukter</p>
+      <div class="shop-grid">
+        <div class="product">
+          <div class="product-img">Paraply med logo</div>
+          <h4>Paraply - A&amp;N</h4>
+          <p>Pris: 129 DKK</p>
+          <a class="small-btn" href="#checkout">Køb</a>
+        </div>
+        <div class="product">
+          <div class="product-img">Duftfrisker</div>
+          <h4>Duftfrisker</h4>
+          <p>Pris: 39 DKK</p>
+          <a class="small-btn" href="#checkout">Køb</a>
+        </div>
+        <div class="product">
+          <div class="product-img">Krus</div>
+          <h4>Krus - A&amp;N</h4>
+          <p>Pris: 89 DKK</p>
+          <a class="small-btn" href="#checkout">Køb</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Abonnement -->
+    <section id="abonnement" class="section container">
+      <h2>Abonnement</h2>
+      <p class="muted">Vælg en fast pakke og få fordele — log ind for at se dine tilgodehavender.</p>
+      <div class="subs-grid">
+        <div class="sub-card">
+          <h3>Bronze</h3><p>1 klargøring pr. måned</p><p class="price">199 DKK/md</p><a class="small-btn" href="#signup">Tilmeld</a>
+        </div>
+        <div class="sub-card">
+          <h3>Sølv</h3><p>2 klargøringer pr. måned</p><p class="price">349 DKK/md</p><a class="small-btn" href="#signup">Tilmeld</a>
+        </div>
+        <div class="sub-card">
+          <h3>Guld</h3><p>4 klargøringer pr. måned</p><p class="price">649 DKK/md</p><a class="small-btn" href="#signup">Tilmeld</a>
+        </div>
+      </div>
+      <div class="login-panel">
+        <h4>Login for abonnenter</h4>
+        <form id="login-form">
+          <input placeholder="E-mail" required type="email">
+          <input placeholder="Adgangskode" required type="password">
+          <button class="small-btn" type="submit">Log ind</button>
+        </form>
+        <div class="subscription-status" aria-live="polite" id="sub-status">Ikke logget ind.</div>
+      </div>
+    </section>
+
+    <!-- Kontakt -->
+    <section id="kontakt" class="section container">
+      <h2>Kontakt</h2>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <h3>Adresse</h3>
+          <p>Din adresse eller arbejdsområde</p>
+          <h3>Telefon</h3>
+          <p><a href="tel:+4500000000">+45 00 00 00 00</a></p>
+        </div>
+        <div class="contact-card">
+          <h3>Åbningstider</h3>
+          <p>Man-Fre 08:00 - 18:00</p>
+          <p>Weekend efter aftale</p>
+          <h3>Kontaktformular</h3>
+          <form id="contact-form">
+            <input placeholder="Navn" required>
+            <input placeholder="E-mail" required type="email">
+            <textarea placeholder="Besked" required></textarea>
+            <button class="small-btn" type="submit">Send</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>© A&amp;N Bilpleje & Klargøring</div>
+        <div>Følg os: (ikon links)</div>
+        <div>Adresse / CVR</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Booking modal (placeholder JS) -->
+  <div id="booking" class="modal" aria-hidden="true">
+    <div class="modal-inner">
+      <button class="close">✕</button>
+      <h3>Book tid</h3>
+      <form id="booking-form">
+        <label>Service<select><option>Udvendig vask</option><option>Indvendig</option><option>Polering</option></select></label>
+        <label>Dato <input type="date" required></label>
+        <label>Tid <input type="time"></label>
+        <label>Navn <input required></label>
+        <label>Telefon <input required></label>
+        <button class="small-btn" type="submit">Bekræft booking</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
